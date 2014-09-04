@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 PRODUCT_COPY_FILES += \
-    device/huawei/msm7x27a-common/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/huawei/msm7x27a-common/configs/nfcee_access.xml:system/etc/permissions/nfcee_access.xml
     
 # NFC Support
 PRODUCT_PACKAGES += \
