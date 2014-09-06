@@ -45,9 +45,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.confg.hw_appversion=U8951V4_4_KERNEL
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.nfc.enabled=true \ 
-    ro.config.nfc.card_setting=false \
-    ro.config.hw_accesscontrol=true \
-    ro.config.hw_smartcardservice=true
+    ro.nfc.enabled=true
 
 $(call inherit-product-if-exists, vendor/huawei/u8951/u8951-vendor.mk)
