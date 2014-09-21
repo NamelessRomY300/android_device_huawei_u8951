@@ -20,9 +20,6 @@
 # Inherit from the u8833 definitions
 -include device/huawei/u8833/BoardConfig.mk
 
-# Inherit from the NFC definitions
--include hardware/libhardware/u8833/modules/nfc/Android.mk
-
 TARGET_BOOTLOADER_BOARD_NAME := u8951
 
 # Bluetooth
