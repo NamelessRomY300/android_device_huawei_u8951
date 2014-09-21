@@ -52,5 +52,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.confg.hw_nfc_cfgversion=110
 
-$(call inherit-product-if-exists, vendor/huawei/u8951/u8951-vendor.mk)
+# $(call inherit-product-if-exists, vendor/huawei/u8951/u8951-vendor.mk)
 
