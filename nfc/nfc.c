@@ -16,8 +16,8 @@
 #include <errno.h>
 #include <string.h>
 
-#include <hardware/libhardware/hardware.h>
-#include <hardware/libhardware/nfc.h>
+#include <hardware/libhardware/include/hardware.h>
+#include <hardware/libhardware/include/nfc.h>
 
 static uint8_t pn544_eedata_settings[][4] = {
     // DIFFERENTIAL_ANTENNA
