@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := nfc.msm8625
+LOCAL_MODULE := nfc.huawei
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/lib
 LOCAL_SRC_FILES := nfc.c
 LOCAL_SHARED_LIBRARIES := liblog libcutils
