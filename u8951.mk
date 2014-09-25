@@ -40,8 +40,11 @@ PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
     Nfc \
-    Tag \
-    com.android.nfc_extras    
+    com.android.nfc_extras
+
+# NFC Support
+PRODUCT_PACKAGES += \
+    Tag
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
