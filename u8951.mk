@@ -38,6 +38,7 @@ PRODUCT_COPY_FILES += \
 # NFC Support
 PRODUCT_PACKAGES += \
     libnfc \
+    libnfc_nci_jni \
     libnfc_jni \
     Nfc \
     com.android.nfc_extras
