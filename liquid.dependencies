@@ -19,12 +19,6 @@
     },
     {
         "remote": "gh",
-        "repository": "Y300-0100/chil360-kernel",
-        "target_path": "kernel/huawei/huawei-kernel-3.4",
-        "revision": "kitkat"
-    },
-    {
-        "remote": "gh",
         "repository": "Y300-0100/proprietary_vendor_huawei",
         "target_path": "vendor/huawei",
         "revision": "kitkat"
