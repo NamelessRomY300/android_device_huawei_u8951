@@ -20,7 +20,6 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8951/overlay
 PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
-    libnfc_ndef \
     Nfc \
     Tag \
     com.android.nfc_extras
