@@ -16,6 +16,14 @@
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/u8951/overlay
 
+# Packages
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml
@@ -28,24 +36,12 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/huawei/u8951/configs/nfcee_access.xml
+    NFCEE_ACCESS_PATH := device/huawei/msm7x27a-common/configs/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/huawei/u8951/configs/nfcee_access_debug.xml
+    NFCEE_ACCESS_PATH := device/huawei/msm7x27a-common/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
-    
-# NFC Support
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_nci_jni \
-    libnfc_jni \
-    Nfc \
-    com.android.nfc_extras
-
-# NFC Support
-PRODUCT_PACKAGES += \
-    Tag
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,7 +50,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.confg.hw_appversion=U8951V4_4_KERNEL
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.nfc.enabled=true \
     ro.confg.hw_nfc_cfgversion=110
 
-# $(call inherit-product-if-exists, vendor/huawei/u8951/u8951-vendor.mk)
-
+$(call inherit-product-if-exists, vendor/huawei/u8951/u8951-vendor.mk)
