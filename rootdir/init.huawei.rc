@@ -27,25 +27,20 @@
 #
 
 on boot
-    mkdir /data/nfc 0700 nfc nfc
-    chown nfc nfc /dev/pn544
-    setprop ro.nfc.port "I2C"
-    
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-    
-    # NFC local data and misc
-    mkdir /data/nfc/ 0770 nfc nfc
-    mkdir /data/misc/nfc/param 0770 nfc nfc
-
-    # permissions for NFC
-    chmod 0600 /dev/pn544
+    mkdir /data/nfc 0600 nfc nfc
     chown nfc nfc /dev/pn544
     chown nfc nfc /sys/class/NFC_sensor/comn/nxp_uicc_swp
     chmod 0664 /sys/class/NFC_sensor/comn/nxp_uicc_swp
 	      setprop debug.nfc.fw_download "true"
 	      setprop debug.nfc.fw_boot_download "false"
+    setprop ro.nfc.port "I2C"
+    
+    # NFC local data and nfcee xml storage
+    mkdir /data/nfc 0600 nfc nfc
+    mkdir /data/nfc/param 0600 nfc nfc
+    
+    # NFC local data and misc
+    mkdir /data/misc/nfc/param 0600 nfc nfc
 
 on init    
     # NFC
