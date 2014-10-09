@@ -31,23 +31,23 @@ on init
 service nfc_check /system/bin/nfc_check
     class main
     oneshot
-    socket nfc_check stream 660 nfc nfc
+    socket nfc_check stream 044 nfc nfc
     user nfc
     group system
     
 on boot
-    mkdir /data/nfc 0600 nfc nfc
+    mkdir /data/nfc 664 nfc nfc
     chown nfc nfc /dev/pn544
     chown nfc nfc /sys/class/NFC_sensor/comn/nxp_uicc_swp
-    chmod 0664 /sys/class/NFC_sensor/comn/nxp_uicc_swp
+    chmod 000 /sys/class/NFC_sensor/comn/nxp_uicc_swp
 	      setprop debug.nfc.fw_download "true"
 	      setprop debug.nfc.fw_boot_download "false"
     setprop ro.nfc.port "I2C"
     
     # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0600 nfc nfc
+    mkdir /data/nfc 044 nfc nfc
     mkdir /data/nfc/param 0600 nfc nfc
     
     # NFC local data and misc
-    mkdir /data/misc/nfc 0600 nfc nfc
-    mkdir /data/misc/nfc/param 0600 nfc nfc    
+    mkdir /data/misc/nfc 044 nfc nfc
+    mkdir /data/misc/nfc/param 044 nfc nfc    
