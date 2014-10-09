@@ -42,7 +42,7 @@ else
     NFCEE_ACCESS_PATH := device/huawei/u8951/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access_debug.xml
 
 # Properties
