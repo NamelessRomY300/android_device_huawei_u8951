@@ -36,7 +36,9 @@ service nfc_check /system/bin/nfc_check
     group system
     
 on boot
-    mkdir /data/nfc 664 nfc nfc
+    mkdir /data/nfc 044 nfc nfc
+    mkdir /dev/pn544
+    mkdir /sys/class/NFC_sensor/comn/nxp_uicc_swp
     chown nfc nfc /dev/pn544
     chown nfc nfc /sys/class/NFC_sensor/comn/nxp_uicc_swp
     chmod 000 /sys/class/NFC_sensor/comn/nxp_uicc_swp
@@ -46,8 +48,8 @@ on boot
     
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 044 nfc nfc
-    mkdir /data/nfc/param 0600 nfc nfc
+    mkdir /data/nfc/param 044 nfc nfc
     
     # NFC local data and misc
     mkdir /data/misc/nfc 044 nfc nfc
-    mkdir /data/misc/nfc/param 044 nfc nfc    
+    mkdir /data/misc/nfc/param 044 nfc nfc
