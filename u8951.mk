@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
     libnfc_jni \
     Nfc \
     Tag \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    org.simalliance.openmobileapi.service
 
 # Permissions
 PRODUCT_COPY_FILES += \
