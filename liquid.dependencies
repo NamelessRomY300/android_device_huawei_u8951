@@ -13,6 +13,12 @@
     },
     {
         "remote": "gh",
+        "repository": "Y300-0100/chil360-kernel",
+        "target_path": "kernel/huawei/huawei-kernel-3.4",
+        "revision": "kitkat"
+    },
+    {
+        "remote": "gh",
         "repository": "Y300-0100/android_device_huawei_u8833",
         "target_path": "device/huawei/u8833",
         "revision": "cm-11.0"
