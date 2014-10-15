@@ -43,7 +43,7 @@
     },  
     {
         "remote": "gh",
-        "repository": "Y300-0100/android_external_webkit",
+        "repository": "Dazzozo/android_external_webkit",
         "target_path": "external/webkit",
         "revision": "kitkat"
     },
