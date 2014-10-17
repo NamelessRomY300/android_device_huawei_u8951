@@ -14,24 +14,30 @@
 # limitations under the License.
 #
 
-# Inherit some common LS stuff.
-$(call inherit-product, vendor/liquid/config/common_phone.mk)
-
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/liquid/config/common.mk)
-
-# Inherit device configuration
-$(call inherit-product, device/huawei/u8951/full_u8951.mk)
-
 # Correct boot animation size for the screen
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Device name
-PRODUCT_NAME := liquid_u8951
-PRODUCT_DEVICE := u8951
+# APNs
+$(call inherit-product, vendor/nameless/config/apns.mk)
 
-# CM packages
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/nameless/config/common.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/huawei/u8825/full_u8825.mk)
+
+# Release name and versioning
+PRODUCT_RELEASE_NAME := Huawei G510
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := u8915
+PRODUCT_NAME := nameless_u8915
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := Huawei G510
+PRODUCT_MANUFACTURER := Huawei
 PRODUCT_PACKAGES += \
-    Torch \
     SmartCardService
